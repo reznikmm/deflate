@@ -1,0 +1,18 @@
+on: [push, pull_request]
+name: Build
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get GNAT toolchain with alire
+        uses: alire-project/setup-alire@v1
+        with:
+          toolchain: gnat_native gprbuild
+      - name: Build sources
+        run: |
+          set -e -x
+          alr build
+          cd tests
+          alr build

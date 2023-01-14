@@ -1,7 +1,7 @@
 Deflate
 =======
 
-[![Build](https://github.com/reznikmm/deflate/workflows/Build/badge.svg)](https://github.com/reznikmm/deflate/actions)
+[![Build](https://github.com/reznikmm/deflate/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/reznikmm/deflate/actions)
 
 > A deflate compression library
 
