@@ -1,0 +1,17 @@
+name = "tests"
+description = "Some tests for deflate"
+version = "0.1.0-dev"
+
+authors = ["Max Reznik"]
+maintainers = ["Max Reznik <reznikmm@gmail.com>"]
+maintainers-logins = ["reznikmm"]
+
+configuration.disabled = true
+
+executables = ["tests"]
+
+[[depends-on]]
+deflate = "~0.1.0-dev"
+
+[[pins]]
+deflate = { path='..' }

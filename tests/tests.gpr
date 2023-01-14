@@ -1,0 +1,22 @@
+--  SPDX-FileCopyrightText: 2023 Max Reznik <reznikmm@gmail.com>
+--
+--  SPDX-License-Identifier: Apache-2.0
+----------------------------------------------------------------
+
+with "deflate.gpr";
+
+project Tests is
+
+   for Source_Dirs use ("src/");
+   for Object_Dir use "obj/";
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("tests.adb");
+
+   package Compiler renames Deflate.Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+end Tests;
